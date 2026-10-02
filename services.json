@@ -1,0 +1,50 @@
+{
+  "groups": [
+    {
+      "id": "pay",
+      "title": "Betalning och id",
+      "items": [
+        { "name": "BankID", "url": "https://www.bankid.com" },
+        { "name": "Swish", "url": "https://www.swish.nu" },
+        { "name": "Swedbank", "url": "https://www.swedbank.se" },
+        { "name": "Handelsbanken", "url": "https://www.handelsbanken.se" },
+        { "name": "SEB", "url": "https://seb.se" },
+        { "name": "Nordea", "url": "https://www.nordea.se" }
+      ]
+    },
+    {
+      "id": "energy",
+      "title": "El och telekom",
+      "items": [
+        { "name": "Vattenfall", "url": "https://www.vattenfall.se" },
+        { "name": "Ellevio", "url": "https://www.ellevio.se" },
+        { "name": "Svenska kraftnät", "url": "https://www.svk.se" },
+        { "name": "Telia", "url": "https://www.telia.se" },
+        { "name": "Tele2", "url": "https://www.tele2.se" },
+        { "name": "Tre", "url": "https://www.tre.se" }
+      ]
+    },
+    {
+      "id": "gov",
+      "title": "Myndigheter",
+      "items": [
+        { "name": "Skatteverket", "url": "https://www.skatteverket.se" },
+        { "name": "Försäkringskassan", "url": "https://www.forsakringskassan.se" },
+        { "name": "1177 Vårdguiden", "url": "https://www.1177.se" },
+        { "name": "regeringen.se", "url": "https://www.regeringen.se" },
+        { "name": "Trafikverket", "url": "https://www.trafikverket.se" },
+        { "name": "SMHI", "url": "https://www.smhi.se" }
+      ]
+    },
+    {
+      "id": "daily",
+      "title": "Vardag",
+      "items": [
+        { "name": "SJ", "url": "https://www.sj.se" },
+        { "name": "SL", "url": "https://sl.se" },
+        { "name": "PostNord", "url": "https://www.postnord.se" },
+        { "name": "Spotify", "url": "https://www.spotify.com" }
+      ]
+    }
+  ]
+}
