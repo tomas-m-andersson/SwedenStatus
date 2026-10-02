@@ -1,0 +1,35 @@
+# Lägg filen i ditt repo som .github/workflows/check-status.yml
+name: Kontrollera status
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # var 5:e minut (GitHub kan fördröja körningen något)
+  workflow_dispatch:         # gör att du kan starta den manuellt
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Kör kontrollen
+        run: node check.mjs
+      - name: Spara status.json
+        run: |
+          git config user.name "status-bot"
+          git config user.email "status-bot@users.noreply.github.com"
+          git add status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Uppdatera status"
+            git pull --rebase
+            git push
+          fi
